@@ -1,4 +1,5 @@
 ﻿using BusinessLogic;
+using BusinessLogic;
 using NUnit.Framework.Legacy;
 
 namespace TestProjectLCS
