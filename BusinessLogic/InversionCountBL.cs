@@ -15,7 +15,7 @@ namespace BusinessLogic
     public class InversionCountBL
     {
         public int[] _arr;
-        public int _inversionCount;
+        public double _inversionCount;
         public InversionCountBL()
         {
         }
@@ -24,7 +24,7 @@ namespace BusinessLogic
             => 0;
         public int[] GetArray()
                             => _arr;
-        public int GetInversionCount()
+        public double GetInversionCount()
                             => _inversionCount;
 
         public  int[] MergeSort(int[] input, int low, int high)
