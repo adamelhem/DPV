@@ -14,16 +14,18 @@ namespace BusinessLogic
 {
     public class InversionCountBL
     {
-        public static int[] _arr;
+        public int[] _arr;
+        public int _inversionCount;
         public InversionCountBL()
         {
         }
 
         public int InversionCount(int[] arr)
             => 0;
-
         public int[] GetArray()
                             => _arr;
+        public int GetInversionCount()
+                            => _inversionCount;
 
         public  int[] MergeSort(int[] input, int low, int high)
         {
@@ -39,6 +41,7 @@ namespace BusinessLogic
 
         public  int[] MergeSort(int[] input)
         {
+            _inversionCount = 0;
             return MergeSort(input, 0, input.Length - 1); ;
         }
 
@@ -59,6 +62,7 @@ namespace BusinessLogic
                 }
                 else
                 {
+                    _inversionCount = _inversionCount + (middle - left + 1) ;
                     tmp[tmpIndex] = input[right];
                     right = right + 1;
                 }
