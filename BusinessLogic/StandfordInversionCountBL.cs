@@ -12,11 +12,11 @@ using System.Text.Json.Serialization.Metadata;
 
 namespace BusinessLogic
 {
-    public class InversionCountBL
+    public class StandfordInversionCountBL
     {
         public int[] _arr;
         public double _inversionCount;
-        public InversionCountBL()
+        public StandfordInversionCountBL()
         {
         }
 
