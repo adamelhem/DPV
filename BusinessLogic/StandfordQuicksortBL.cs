@@ -9,17 +9,17 @@ namespace BusinessLogic
             return 0;
         }
 
-        public int[] QuickSort(int[] input, int l = 0, int r = 0)
+        public void QuickSort(int[] input, int l = 0, int r = 0)
         {
-            if (r == 0)
+            if (l<r)
             {
-                r = input.Length;
+                var p = Partion(input, l, r);
+                QuickSort(input, l, p - 1);
+                QuickSort(input, p + 1, r);
             }
-
-            return [1, 2, 3];
         }
 
-        public int[] Partion(int[] input, int l = 0, int r = 0)
+        public int Partion(int[] input, int l = 0, int r = 0)
         {
             var p = input[l];
             var j = r;
@@ -32,7 +32,7 @@ namespace BusinessLogic
                 }
             }
             Swap(input, l, j);
-            return input;
+            return j;
         }
 
         public int[] Swap(int[] input, int p1, int p2)
