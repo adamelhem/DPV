@@ -2,14 +2,14 @@
 
 namespace TestProjectLCS
 {
-    public class InversionCountTest
+    public class StandfordInversionCountTest
     {
-        private InversionCountBL _BL;
+        private StandfordInversionCountBL _BL;
 
         [SetUp]
         public void Setup()
         {
-            _BL = new InversionCountBL();
+            _BL = new StandfordInversionCountBL();
         }
 
         [Test]

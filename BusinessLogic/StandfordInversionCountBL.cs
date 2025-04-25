@@ -7,9 +7,6 @@
  * 5 6 7 11 12 13
  */
 
-using System.Collections.Generic;
-using System.Text.Json.Serialization.Metadata;
-
 namespace BusinessLogic
 {
     public class StandfordInversionCountBL
