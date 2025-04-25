@@ -22,15 +22,16 @@ namespace BusinessLogic
         public int[] Partion(int[] input, int l = 0, int r = 0)
         {
             var p = input[l];
-            var i = l + 1;
-            for (var j = l + 1; j < r; j++)
+            var i = r;
+            for (var j = r; j > l; j--)
             {
-                if (input[j] < p)
+                if (input[j] > input[i])
                 {
-
+                    Swap(input, j, i);
+                    i--;
                 }
             }
-            return new int[] { 1, 2, 3 };
+            return input;
         }
 
         public int[] Swap(int[] input, int p1, int p2)
