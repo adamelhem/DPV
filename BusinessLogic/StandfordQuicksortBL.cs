@@ -16,21 +16,22 @@ namespace BusinessLogic
                 r = input.Length;
             }
 
-            return new int[] { 1, 2, 3 };
+            return [1, 2, 3];
         }
 
         public int[] Partion(int[] input, int l = 0, int r = 0)
         {
             var p = input[l];
-            var i = r;
-            for (var j = r; j > l; j--)
+            var j = r;
+            for (var i = r; i > l; i--)
             {
-                if (input[j] > input[i])
+                if (input[i] > p)
                 {
                     Swap(input, j, i);
-                    i--;
+                    j--;
                 }
             }
+            Swap(input, l, j);
             return input;
         }
 
