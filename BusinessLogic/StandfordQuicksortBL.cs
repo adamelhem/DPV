@@ -4,12 +4,14 @@ namespace BusinessLogic
 {
     public class StandfordQuicksortBL
     {
-        public int GetSwapCount()
+        private double _CompareCount;
+
+        public double GetCompareCount()
         {
-            return 0;
+            return _CompareCount;
         }
 
-        public void QuickSort(int[] input, int l = 0, int r = 0)
+        public void QuickSort(int[] input, int l, int r)
         {
             if (l<r)
             {
@@ -25,6 +27,7 @@ namespace BusinessLogic
             var j = r;
             for (var i = r; i > l; i--)
             {
+                _CompareCount = _CompareCount + 1;
                 if (input[i] > p)
                 {
                     Swap(input, j, i);
