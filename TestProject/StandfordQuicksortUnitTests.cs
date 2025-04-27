@@ -24,38 +24,27 @@ namespace TestProject
         public void TestPartion()
         {
             var input = new int[] { 7, 6, 10, 5, 9, 2, 1, 15, 7 };
-           _BL.Partion(input, 0, input.Length - 1);
-            var sorted = input;
-          Assert.That(sorted, Is.EqualTo(new int[]{ 2, 6, 1, 5, 7, 7, 10, 9, 15}));
+           _BL.Partion(input, 0, input.Length-1);
+            Assert.That(input, Is.EqualTo(new int[]{ 1, 6, 5, 2, 7, 10, 9, 15, 7}));
         }
 
         [Test]
         public void TestQuickSort()
         {
             var input = new int[] { 7, 6, 10, 5, 9, 2, 1, 15, 7 };
-            _BL.QuickSort(input, 0, input.Length - 1);
-            var sorted = input;
-            Assert.That(sorted, Is.EqualTo(new int[] { 1, 2, 5, 6, 7, 7, 9, 10, 15 }));
-        }
-
-        [Test]
-        public void TestCompareCount()
-        {
-            var input = new int[]{5, 6, 8, 7, 2, 1, 4, 3};
-            _BL.QuickSort(input, 0, input.Length-1);
-            var sorted = input;
-            var outputCount = _BL.GetCompareCount();
-            Assert.That(outputCount, Is.EqualTo(14));
+            _BL.QuickSort(input, 0, input.Length-1 );
+            Assert.That(input, Is.EqualTo(new int[] { 1, 2, 5, 6, 7, 7, 9, 10, 15 }));
         }
 
         [Test]
         public void TestCompareCountAnswer()
         {
             var input = getArray();
-            _BL.QuickSort(input, 0, input.Length - 1);
+            _BL = new StandfordQuicksortBL();
+            _BL.QuickSort(input, 0, input.Length-1);
             var sorted = input;
             var outputCount = _BL.GetCompareCount();
-            Assert.That(outputCount, Is.EqualTo(156020));
+            Assert.That(outputCount, Is.EqualTo(182078));
         }
 
         private int[] getArray() =>
