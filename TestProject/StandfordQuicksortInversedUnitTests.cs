@@ -2,7 +2,7 @@
 
 namespace TestProject
 {
-    public class StandfordQuicksortUnitTests
+    public class StandfordQuicksortInversedUnitTests
     {
         private StandfordQuicksortBL _BL;
 
@@ -17,7 +17,7 @@ namespace TestProject
         {
             var input = new double[] { 1, 2 };
             var sorted = _BL.Swap(input, 0, 1);
-            Assert.That(sorted, Is.EqualTo(new int[] { 2, 1 }));
+            Assert.That(sorted, Is.EqualTo(new double[] { 2, 1 }));
         }
 
         [Test]
@@ -25,15 +25,16 @@ namespace TestProject
         {
             var input = new double[] { 7, 6, 10, 5, 9, 2, 1, 15, 7 };
            _BL.Partion(input, 0, input.Length-1);
-            Assert.That(input, Is.EqualTo(new int[]{ 1, 6, 5, 2, 7, 10, 9, 15, 7}));
+            Assert.That(input, Is.EqualTo(new double[]{ 1, 6, 5, 2, 7, 10, 9, 15, 7}));
         }
 
         [Test]
         public void TestQuickSort()
         {
             var input = new double[] { 7, 6, 10, 5, 9, 2, 1, 15, 7 };
+            _BL.Swap(input, 0, input.Length - 1);
             _BL.QuickSort(input, 0, input.Length-1 );
-            Assert.That(input, Is.EqualTo(new int[] { 1, 2, 5, 6, 7, 7, 9, 10, 15 }));
+            Assert.That(input, Is.EqualTo(new double[] { 1, 2, 5, 6, 7, 7, 9, 10, 15 }));
         }
 
         [Test]

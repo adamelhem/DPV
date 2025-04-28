@@ -11,7 +11,7 @@ namespace BusinessLogic
             return _CompareCount;
         }
 
-        public void QuickSort(int[] input, int l, int r)
+        public void QuickSort(double[] input, int l, int r)
         {
             if ( l >= r )
             {
@@ -23,7 +23,7 @@ namespace BusinessLogic
             QuickSort(input, p, r);
         }
 
-        public int Partion(int[] input, int l, int r)
+        public int Partion(double[] input, int l, int r)
         {
             var p = input[l];
             var i = l+1;
@@ -39,7 +39,7 @@ namespace BusinessLogic
             return i;
         }
 
-        public int[] Swap(int[] input, int p1, int p2)
+        public double[] Swap(double[] input, int p1, int p2)
         {
             var temp = input[p1];
             input[p1] = input[p2];
