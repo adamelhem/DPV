@@ -46,6 +46,14 @@ namespace BusinessLogic
             input[p2] = temp;
             return input;
         }
+        
+        public double[] MedianOf3(double[] input, int p1, int p2)
+        {
+            var temp = input[p1];
+            input[p1] = input[p2];
+            input[p2] = temp;
+            return input;
+        }
 
     }
 }
