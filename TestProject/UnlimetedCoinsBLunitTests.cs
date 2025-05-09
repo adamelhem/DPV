@@ -28,10 +28,9 @@ namespace TestProject
              * [5, 5]                                          
              */
 
-            int n = 4/* your value for n */;
             int v = 10/* your value for v */;
             int[] x = { 2, 5, 3, 6 }; // Initialize your array x with appropriate values
-            var result = _BL.CanMakeChange(n, v, x);
+            var result = _BL.CanMakeChange( v, x);
             Assert.That(result, Is.True);
         }
 
